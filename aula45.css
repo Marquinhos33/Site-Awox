@@ -1,0 +1,260 @@
+
+/*CABEÇALHO DA PAGINA*/
+
+body
+{
+    margin: 0px;
+    background-color: grey;
+}
+
+.container
+{
+    background-color: white;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+.container-links, .container-imagem, .container-titulo, .container-carrinho
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LINKS */
+.container-links a
+{
+    font-size: 22px;
+    text-decoration: none;
+    padding: 1px 10px;
+    text-align: center;
+    color: black;
+    font-family: Tahoma; 
+}
+
+.container-links a:hover
+{
+    font-weight: bold;
+    color:  slateblue;
+}
+
+.container-imagem
+{
+    display: none;
+}
+
+/* TITULO */
+
+.container-titulo
+{
+    margin: 0px 70px 0px 0px;
+}
+
+.container-titulo h1
+{
+    font-size: 70px;
+    color: black;
+    margin: 0px;
+    text-shadow: 4px 4px 2px royalblue;
+}
+
+
+/* CONFIGURAÇÃO DO CARRINHO */
+
+.container-carrinho img
+{
+    margin: 2px 60px 2px 2px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.container-carrinho :hover
+{
+    border-bottom: 4px solid  slateblue;
+}
+
+/* PARTE DOIS DA PAGINA */
+
+/* PRODUTOS */
+
+.produtos-titulo
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 90px;
+}
+
+.produtos-titulo h2
+{
+    margin: 3px;
+    display: flex;
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    text-shadow: 4px 4px 3px white;
+}
+
+/* LISTA DE PRODUTOS */
+
+
+.produtos-itens ul
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.produtos-itens ul li
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+    padding: 10px 0px;
+    margin: 10px 20px 20px 10px;
+    border-radius: 10px;
+    font-family: Tahoma;
+    text-shadow: 3px 3px 2px royalblue;   
+}
+
+.produtos-itens ul li:hover
+{
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.produtos-itens ul li h2
+{
+    margin-top: 5px; 
+    font-weight: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* VALOR E ACESSORIO */
+.produtos-valor
+{
+    margin: 15px 0px 15px 0px; 
+    color: darkcyan;
+    font-size: 40px;
+    text-shadow: 3px 3px 2px black;
+}
+
+.produtos-acessorio
+{
+    margin: 15px 0px 15px 0px; 
+}
+
+.produtos-acessorio button
+{
+    font-size: 25px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 2px 25px;
+    font-family: Tahoma;   
+    text-shadow: 1px 1px 1px blue;
+}
+
+.produtos-acessorio button:hover
+{
+    background-color: slateblue;
+}
+
+/* FORMATO PARA TABLET E CELULAR */
+
+/* FORMATO TABLET */
+
+@media (min-width:700px) and (max-width:1000px)
+{
+    .container-links a
+    {
+        font-size: 25px;
+    }
+
+    .container-titulo
+    {
+        margin: 0px 35px 0px 1px;
+    }
+
+    .container-titulo h1
+    {
+        font-size: 60px;
+    }
+
+    .container-carrinho img
+    {
+        margin: 0px 30px 0px 0px;
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+
+/* FORMATO CELULAR */
+@media (max-width:600px) 
+{
+    .container-titulo
+        {
+            margin: 0px 0px 0px 0px;
+        }
+
+    .container-titulo h1
+        {
+            font-size: 60px;
+        }
+
+    .container-links
+        {
+            display: none;
+        }
+
+     .container-imagem
+        {
+            display: flex;
+        }
+
+    .container-imagem img
+        {
+            width: 40px;
+            height: 50px;
+            margin: 0px 0px 0px 20px;
+        }
+
+     .container-carrinho img
+        {
+            margin: 0px 20px 0px 0px;
+            width: 60px;
+            height: 60px;
+        }
+
+    .produtos-titulo
+        {
+            justify-content: center;
+        }
+
+    .produtos-titulo h2
+        {
+            margin-top: 10px;
+            margin-left: 0px;
+            font-size: 35px;
+        }
+
+    .produtos-itens ul li
+        {
+            width: 300px;
+            margin: 30px 20px 20px 10px;
+        }
+
+}
